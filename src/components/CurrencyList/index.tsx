@@ -18,6 +18,7 @@ export default function CurrencyList({
   displayList,
   enableSearch = false,
 }: Props): React.ReactElement {
+  // search should be here
   const renderItem: ListRenderItem<Currency> = ({ item }) => {
     return <CurrencyListItem data={item} />;
   };

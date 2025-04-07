@@ -1,5 +1,6 @@
 import { Currency } from "./type";
 
+
 export const fiatList: Currency[] = [
   {
     "id": "SGD",

@@ -1,13 +1,26 @@
 import Button from "@/components/Button";
 import colors from "@/themes/colors";
 import { StyleSheet, View } from "react-native";
+import { HomeScreenContext } from "../..";
+import { useContext } from "react";
 
 export default function ButtonCollections(): React.ReactElement {
+  const { handleClearDatabase, handleInsertDatabase } =
+    useContext(HomeScreenContext);
+
   return (
     <View style={styles.container}>
       <View style={styles.dbRowContainer}>
-        <Button label="Clear Database" variant={"danger"} onPress={() => {}} />
-        <Button label="Insert Data" variant={"success"} onPress={() => {}} />
+        <Button
+          label="Clear Database"
+          variant={"danger"}
+          onPress={handleClearDatabase}
+        />
+        <Button
+          label="Insert Data"
+          variant={"success"}
+          onPress={handleInsertDatabase}
+        />
       </View>
       <View style={styles.fiatRowContainer}>
         <Button label="Crypto" onPress={() => {}} />

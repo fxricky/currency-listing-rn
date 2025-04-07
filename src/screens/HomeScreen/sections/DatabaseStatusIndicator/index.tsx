@@ -12,8 +12,10 @@ import {
   ViewStyle,
 } from "react-native";
 
+export type DatabaseStatus = "empty" | "populated";
+
 type Props = {
-  status: "danger" | "success";
+  status: DatabaseStatus;
 };
 
 type StatusStyles = {
@@ -22,7 +24,9 @@ type StatusStyles = {
   imgIcCircle: StyleProp<ImageStyle>;
 };
 
-export default function DatabaseStatus({ status }: Props): React.ReactElement {
+export default function DatabaseStatusIndicator({
+  status,
+}: Props): React.ReactElement {
   const [statusStyles, setStatusStyles] = useState<StatusStyles>(
     getStyles(status),
   );
@@ -38,7 +42,7 @@ export default function DatabaseStatus({ status }: Props): React.ReactElement {
         style={[styles.imgIcCircle, statusStyles.imgIcCircle]}
       />
       <Text style={[styles.txtTitle, statusStyles.txtTitle]}>
-        {"Database Status"}
+        {`Database: ${status}`}
       </Text>
     </View>
   );
@@ -46,13 +50,13 @@ export default function DatabaseStatus({ status }: Props): React.ReactElement {
 
 function getStyles(status: Props["status"]): StatusStyles {
   switch (status) {
-    case "danger":
+    case "empty":
       return {
         container: styles.containerDanger,
         txtTitle: styles.titleDanger,
         imgIcCircle: styles.imgIcCircleDanger,
       };
-    case "success":
+    case "populated":
       return {
         container: styles.containerSuccess,
         txtTitle: styles.titleSuccess,

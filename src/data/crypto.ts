@@ -1,5 +1,6 @@
 import { Currency } from "./type";
 
+
 export const cryptoList: Currency[] = [
   {
     "id": "BTC",
