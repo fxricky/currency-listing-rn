@@ -7,10 +7,12 @@ export default Object.freeze({
     "07": "#364153",
   },
   red: {
+    "01": "#fef2f2",
     "02": "#ffe2e2",
     "07": "#c10007"
   },
   green: {
+    "01": "#f0fdf4",
     "02": "#dcfce7",
     "07": "#008236"
   }
