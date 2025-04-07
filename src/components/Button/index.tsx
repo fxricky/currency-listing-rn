@@ -1,11 +1,23 @@
 import colors from "@/themes/colors";
-import React from "react";
-import { Pressable, StyleSheet, Text } from "react-native";
+import React, { useEffect, useState } from "react";
+import {
+  Pressable,
+  StyleProp,
+  StyleSheet,
+  Text,
+  TextStyle,
+  ViewStyle,
+} from "react-native";
 
 type Props = {
   label: string;
-  variant?: "normal" | "danger" | "success";
+  variant?: "normal" | "danger" | "success" | "focus";
   onPress: () => void;
+};
+
+type VariantStyles = {
+  container: StyleProp<ViewStyle>;
+  txtLabel: StyleProp<TextStyle>;
 };
 
 export default function Button({
@@ -13,25 +25,71 @@ export default function Button({
   variant = "normal",
   onPress,
 }: Props): React.ReactElement {
+  const [variantStyles, setVariantStyles] = useState<VariantStyles>(
+    getStyles(variant),
+  );
+
+  useEffect(() => {
+    setVariantStyles(getStyles(variant));
+  }, [variant]);
+
   return (
-    <Pressable onPress={onPress} style={styles.container}>
-      <Text style={styles.txtLabel}>{label}</Text>
+    <Pressable
+      onPress={onPress}
+      style={[styles.baseContainer, variantStyles.container]}>
+      <Text style={[styles.baseLabel, variantStyles.txtLabel]}>{label}</Text>
     </Pressable>
   );
 }
 
+function getStyles(variant: Props["variant"]): VariantStyles {
+  switch (variant) {
+    case "danger":
+      return {
+        container: styles.btnDanger,
+        txtLabel: styles.txtDanger,
+      };
+    case "success":
+      return {
+        container: styles.btnSuccess,
+        txtLabel: styles.txtSuccess,
+      };
+    default:
+      return {
+        container: styles.btnNormal,
+        txtLabel: styles.txtNormal,
+      };
+  }
+}
+
 const styles = StyleSheet.create({
-  container: {
+  baseContainer: {
     flex: 1,
-    padding: 16,
-    borderRadius: 4,
-    backgroundColor: colors.primary,
+    paddingVertical: 16,
+    borderRadius: 8,
+    backgroundColor: colors.gray["01"],
     alignItems: "center",
     justifyContent: "center",
   },
-  txtLabel: {
-    color: colors.white,
+  baseLabel: {
     fontSize: 16,
-    fontWeight: "bold",
+  },
+  btnNormal: {
+    backgroundColor: colors.gray["01"],
+  },
+  txtNormal: {
+    color: colors.black,
+  },
+  btnDanger: {
+    backgroundColor: colors.red["01"],
+  },
+  txtDanger: {
+    color: colors.red["07"],
+  },
+  btnSuccess: {
+    backgroundColor: colors.green["01"],
+  },
+  txtSuccess: {
+    color: colors.green["07"],
   },
 });
