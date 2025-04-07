@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 16,
     borderRadius: 8,
-    backgroundColor: colors.gray["01"],
+    backgroundColor: colors.gray["02"],
     alignItems: "center",
     justifyContent: "center",
   },
@@ -75,19 +75,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   btnNormal: {
-    backgroundColor: colors.gray["01"],
+    backgroundColor: colors.gray["02"],
   },
   txtNormal: {
     color: colors.black,
   },
   btnDanger: {
-    backgroundColor: colors.red["01"],
+    backgroundColor: colors.red["02"],
   },
   txtDanger: {
     color: colors.red["07"],
   },
   btnSuccess: {
-    backgroundColor: colors.green["01"],
+    backgroundColor: colors.green["02"],
   },
   txtSuccess: {
     color: colors.green["07"],
