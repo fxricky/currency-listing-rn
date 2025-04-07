@@ -4,6 +4,7 @@ export default Object.freeze({
   black: "#000",
   gray: {
     "02": "#f3f4f6",
+    "05": "#99a1af",
     "07": "#364153",
   },
   red: {
