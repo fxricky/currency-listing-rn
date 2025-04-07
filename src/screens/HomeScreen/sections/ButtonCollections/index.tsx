@@ -3,10 +3,22 @@ import colors from "@/themes/colors";
 import { StyleSheet, View } from "react-native";
 import { HomeScreenContext } from "../..";
 import { useContext } from "react";
+import { DisplayListType } from "../../reducer";
+
+function getButtonVariant(
+  displayType: DisplayListType,
+  listType: DisplayListType,
+) {
+  return displayType == listType ? "focus" : "normal";
+}
 
 export default function ButtonCollections(): React.ReactElement {
-  const { handleClearDatabase, handleInsertDatabase } =
-    useContext(HomeScreenContext);
+  const {
+    handleClearDatabase,
+    handleInsertDatabase,
+    setDisplayListType,
+    displayType,
+  } = useContext(HomeScreenContext);
 
   return (
     <View style={styles.container}>
@@ -23,9 +35,21 @@ export default function ButtonCollections(): React.ReactElement {
         />
       </View>
       <View style={styles.fiatRowContainer}>
-        <Button label="Crypto" onPress={() => {}} />
-        <Button label="Fiat" onPress={() => {}} />
-        <Button label="Purchasable" onPress={() => {}} />
+        <Button
+          label="Crypto"
+          variant={getButtonVariant(displayType, "crypto")}
+          onPress={setDisplayListType("crypto")}
+        />
+        <Button
+          label="Fiat"
+          variant={getButtonVariant(displayType, "fiat")}
+          onPress={setDisplayListType("fiat")}
+        />
+        <Button
+          label="Purchasable"
+          variant={getButtonVariant(displayType, "purchasable")}
+          onPress={setDisplayListType("purchasable")}
+        />
       </View>
     </View>
   );

@@ -1,5 +1,6 @@
 import { Currency } from "./type";
 
+export const CRYPTO_STORAGE_KEY = "CRYPTO_STORAGE_KEY";
 
 export const cryptoList: Currency[] = [
   {

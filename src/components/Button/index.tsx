@@ -58,6 +58,12 @@ function getStyles(variant: Props["variant"]): VariantStyles {
         container: styles.btnSuccess,
         txtLabel: styles.txtSuccess,
       };
+
+    case "focus":
+      return {
+        container: styles.btnFocus,
+        txtLabel: styles.txtFocus,
+      };
     default:
       return {
         container: styles.btnNormal,
@@ -95,5 +101,11 @@ const styles = StyleSheet.create({
   },
   txtSuccess: {
     color: colors.green["07"],
+  },
+  btnFocus: {
+    backgroundColor: colors.primary,
+  },
+  txtFocus: {
+    color: colors.white,
   },
 });

@@ -1,5 +1,7 @@
 import { Currency } from "./type";
 
+export const FIAT_STORAGE_KEY = "FIAT_STORAGE_KEY";
+
 
 export const fiatList: Currency[] = [
   {

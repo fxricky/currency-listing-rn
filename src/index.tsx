@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from "react";
+import React, { useEffect } from "react";
 import {
   SafeAreaView,
   StatusBar,
@@ -16,6 +16,9 @@ import {
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import HomeScreen from "./screens/HomeScreen";
 import colors from "./themes/colors";
+import { storeData } from "./utils/storage";
+import { CRYPTO_STORAGE_KEY, cryptoList } from "./data/crypto";
+import { FIAT_STORAGE_KEY, fiatList } from "./data/fiat";
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === "dark";
@@ -23,6 +26,15 @@ function App(): React.JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    (async () => {
+      await Promise.all([
+        storeData(CRYPTO_STORAGE_KEY, cryptoList),
+        storeData(FIAT_STORAGE_KEY, fiatList),
+      ]);
+    })();
+  }, []);
 
   return (
     <SafeAreaView style={[backgroundStyle, styles.container]}>
