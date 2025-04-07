@@ -1,6 +1,9 @@
-import colors from "@/themes/colors";
 import { useEffect, useState } from "react";
+import { icCircle } from "@/assets/icons";
+import colors from "@/themes/colors";
 import {
+  Image,
+  ImageStyle,
   StyleProp,
   StyleSheet,
   Text,
@@ -16,6 +19,7 @@ type Props = {
 type StatusStyles = {
   container: StyleProp<ViewStyle>;
   txtTitle: StyleProp<TextStyle>;
+  imgIcCircle: StyleProp<ImageStyle>;
 };
 
 export default function DatabaseStatus({ status }: Props): React.ReactElement {
@@ -29,8 +33,12 @@ export default function DatabaseStatus({ status }: Props): React.ReactElement {
 
   return (
     <View style={[styles.container, statusStyles.container]}>
+      <Image
+        source={icCircle}
+        style={[styles.imgIcCircle, statusStyles.imgIcCircle]}
+      />
       <Text style={[styles.txtTitle, statusStyles.txtTitle]}>
-        {"\u25CF Database Status"}
+        {"Database Status"}
       </Text>
     </View>
   );
@@ -42,24 +50,32 @@ function getStyles(status: Props["status"]): StatusStyles {
       return {
         container: styles.containerDanger,
         txtTitle: styles.titleDanger,
+        imgIcCircle: styles.imgIcCircleDanger,
       };
     case "success":
       return {
         container: styles.containerSuccess,
         txtTitle: styles.titleSuccess,
+        imgIcCircle: styles.imgIcCircleSuccess,
       };
   }
 }
 const styles = StyleSheet.create({
   container: {
+    flexDirection: "row",
     backgroundColor: colors.white,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    gap: 12,
+    alignItems: "center",
   },
   txtTitle: {
     fontSize: 12,
     fontWeight: "bold",
+    marginLeft: 4,
+  },
+  imgIcCircle: {
+    width: 8,
+    height: 8,
   },
   containerDanger: {
     backgroundColor: colors.red["01"],
@@ -67,10 +83,16 @@ const styles = StyleSheet.create({
   titleDanger: {
     color: colors.red["07"],
   },
+  imgIcCircleDanger: {
+    tintColor: colors.red["07"],
+  },
   containerSuccess: {
     backgroundColor: colors.green["01"],
   },
   titleSuccess: {
     color: colors.green["07"],
+  },
+  imgIcCircleSuccess: {
+    tintColor: colors.green["07"],
   },
 });
