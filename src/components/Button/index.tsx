@@ -37,7 +37,11 @@ export default function Button({
     <Pressable
       onPress={onPress}
       style={[styles.baseContainer, variantStyles.container]}>
-      <Text style={[styles.baseLabel, variantStyles.txtLabel]}>{label}</Text>
+      <Text
+        style={[styles.baseLabel, variantStyles.txtLabel]}
+        numberOfLines={1}>
+        {label}
+      </Text>
     </Pressable>
   );
 }
@@ -65,7 +69,7 @@ function getStyles(variant: Props["variant"]): VariantStyles {
 const styles = StyleSheet.create({
   baseContainer: {
     flex: 1,
-    paddingVertical: 16,
+    paddingVertical: 12,
     borderRadius: 8,
     backgroundColor: colors.gray["02"],
     alignItems: "center",

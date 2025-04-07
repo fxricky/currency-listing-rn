@@ -1,28 +1,46 @@
-import { Fragment } from "react";
-import { FlatList, StyleSheet } from "react-native";
+import React from "react";
+import { FlatList, ListRenderItem, StyleSheet, View } from "react-native";
 import CurrencyListItem from "@/components/CurrencyListItem";
-import ListHeader from "../ListHeader";
+import ListHeader from "@/components/ListHeader";
+import { Currency } from "@/data/type";
+import colors from "@/themes/colors";
 
-export default function CurrencyList(): React.ReactElement {
-  const renderItem = () => {
-    return <CurrencyListItem />;
+type Props = {
+  displayList: Currency[];
+  enableSearch?: boolean;
+};
+
+function ItemSeparator(): React.ReactElement {
+  return <View style={styles.separator} />;
+}
+
+export default function CurrencyList({
+  displayList,
+  enableSearch = false,
+}: Props): React.ReactElement {
+  const renderItem: ListRenderItem<Currency> = ({ item }) => {
+    return <CurrencyListItem data={item} />;
   };
 
   return (
-    <Fragment>
-      <ListHeader title="Currency List" enableSearch={true} />
+    <>
+      <ListHeader title="Currency List" enableSearch={enableSearch} />
       <FlatList
-        data={[]}
+        data={displayList}
         style={styles.container}
         renderItem={renderItem}
-        stickyHeaderIndices={[0]}
+        ItemSeparatorComponent={() => <ItemSeparator />}
       />
-    </Fragment>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  separator: {
+    height: 1,
+    backgroundColor: colors.gray["02"],
   },
 });
