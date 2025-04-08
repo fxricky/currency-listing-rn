@@ -23,7 +23,7 @@ export default function CurrencyListItem({ data }: Props): React.ReactElement {
       <View style={styles.contentContainer}>
         <Text>{data.name}</Text>
         <View style={styles.row}>
-          <Text>{data.id}</Text>
+          <Text>{data.symbol}</Text>
           <Image source={icChevronRight} style={styles.imgChevronRight} />
         </View>
       </View>

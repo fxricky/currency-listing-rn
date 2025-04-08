@@ -13,7 +13,6 @@ export default function NormalTitle({ title }: Props): React.ReactElement {
   const { enableSearch, setIsSearching } = useContext(ListHeaderSearchContext);
 
   const handleSearchPress = () => {
-    console.log("search");
     setIsSearching(true);
   };
 

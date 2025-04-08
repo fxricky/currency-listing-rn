@@ -25,6 +25,10 @@ export default function HomeScreen(): React.ReactElement {
   const [displayList, setDisplayList] = useState<Currency[]>([]);
 
   useEffect(() => {
+    if (state.databaseStatus == "empty") {
+      return setDisplayList([]);
+    }
+
     switch (state.displayListType) {
       case "crypto":
         setDisplayList(state.cryptoList);
@@ -40,7 +44,7 @@ export default function HomeScreen(): React.ReactElement {
         );
         break;
     }
-  }, [state.displayListType, state.databaseStatus]);
+  }, [state.databaseStatus, state.displayListType]);
 
   const setDatabaseStatus = (status: DatabaseStatus) => {
     dispatch({
@@ -54,7 +58,6 @@ export default function HomeScreen(): React.ReactElement {
   const handleClearDatabase = async () => {
     setDatabaseStatus("empty");
     setDisplayListType("none")();
-    setDisplayList([]);
   };
 
   const handleInsertDatabase = async () => {

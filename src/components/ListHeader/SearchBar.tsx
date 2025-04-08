@@ -3,13 +3,16 @@ import { icArrowLeft, icMagnifyGlass } from "@/assets/icons";
 import { Image, Pressable, StyleSheet, TextInput, View } from "react-native";
 import { ListHeaderSearchContext } from ".";
 import colors from "@/themes/colors";
+import { CurrencyListContext } from "../CurrencyList";
 
 export default function SearchBar(): React.ReactElement {
+  const { setSearchText } = useContext(CurrencyListContext);
   const { setIsSearching } = useContext(ListHeaderSearchContext);
   const [isFocused, setIsFocused] = useState(false);
 
   const handleBackPress = () => {
     setIsSearching(false);
+    setSearchText("");
   };
 
   const handleFocus = () => {
@@ -18,6 +21,10 @@ export default function SearchBar(): React.ReactElement {
 
   const handleBlur = () => {
     setIsFocused(false);
+  };
+
+  const handleSearchTextChange = (text: string) => {
+    setSearchText(text);
   };
 
   return (
@@ -36,6 +43,7 @@ export default function SearchBar(): React.ReactElement {
           onFocus={handleFocus}
           onBlur={handleBlur}
           autoFocus={true}
+          onChangeText={handleSearchTextChange}
         />
       </View>
     </>
