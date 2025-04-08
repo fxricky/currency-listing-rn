@@ -5,6 +5,7 @@
 Before you begin, ensure you have the following installed:
 
 - Node.js (min v18.17.1)
+  - if you are using `nvm`, run `nvm use` to install the correct version
 - npm
 - Xcode
 - Android Studio
