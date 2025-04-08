@@ -1,0 +1,668 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyList renders correctly with default props 1`] = `
+[
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomColor": "#f3f4f6",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "maxWidth": "100%",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "lineHeight": 40,
+        }
+      }
+    >
+      Currency List
+    </Text>
+  </View>,
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    ListEmptyComponent={[Function]}
+    contentContainerStyle={
+      {
+        "flexGrow": 1,
+      }
+    }
+    data={
+      [
+        {
+          "id": "1",
+          "name": "Bitcoin",
+          "symbol": "BTC",
+        },
+        {
+          "id": "2",
+          "name": "Ethereum",
+          "symbol": "ETH",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    style={
+      {
+        "flex": 1,
+      }
+    }
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "gap": 8,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#364153",
+                "borderRadius": 16,
+                "height": 32,
+                "justifyContent": "center",
+                "width": 32,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#f3f4f6",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              B
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <Text>
+              Bitcoin
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "gap": 8,
+                }
+              }
+            >
+              <Text>
+                BTC
+              </Text>
+              <Image
+                source={
+                  {
+                    "testUri": "../../../src/assets/icons/icChevronRight.png",
+                  }
+                }
+                style={
+                  {
+                    "height": 24,
+                    "tintColor": "#99a1af",
+                    "width": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#f3f4f6",
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "gap": 8,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#364153",
+                "borderRadius": 16,
+                "height": 32,
+                "justifyContent": "center",
+                "width": 32,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#f3f4f6",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              E
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <Text>
+              Ethereum
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "gap": 8,
+                }
+              }
+            >
+              <Text>
+                ETH
+              </Text>
+              <Image
+                source={
+                  {
+                    "testUri": "../../../src/assets/icons/icChevronRight.png",
+                  }
+                }
+                style={
+                  {
+                    "height": 24,
+                    "tintColor": "#99a1af",
+                    "width": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
+`;
+
+exports[`CurrencyList renders correctly with different data 1`] = `
+[
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomColor": "#f3f4f6",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "maxWidth": "100%",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "lineHeight": 40,
+        }
+      }
+    >
+      Currency List
+    </Text>
+  </View>,
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    ListEmptyComponent={[Function]}
+    contentContainerStyle={
+      {
+        "flexGrow": 1,
+      }
+    }
+    data={
+      [
+        {
+          "id": "3",
+          "name": "Ripple",
+          "symbol": "XRP",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    style={
+      {
+        "flex": 1,
+      }
+    }
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "gap": 8,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#364153",
+                "borderRadius": 16,
+                "height": 32,
+                "justifyContent": "center",
+                "width": 32,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#f3f4f6",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              R
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <Text>
+              Ripple
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "gap": 8,
+                }
+              }
+            >
+              <Text>
+                XRP
+              </Text>
+              <Image
+                source={
+                  {
+                    "testUri": "../../../src/assets/icons/icChevronRight.png",
+                  }
+                }
+                style={
+                  {
+                    "height": 24,
+                    "tintColor": "#99a1af",
+                    "width": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
+`;
+
+exports[`CurrencyList renders with search bar 1`] = `
+[
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomColor": "#f3f4f6",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "maxWidth": "100%",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "lineHeight": 40,
+        }
+      }
+    >
+      Currency List
+    </Text>
+  </View>,
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    ListEmptyComponent={[Function]}
+    contentContainerStyle={
+      {
+        "flexGrow": 1,
+      }
+    }
+    data={
+      [
+        {
+          "id": "1",
+          "name": "Bitcoin",
+          "symbol": "BTC",
+        },
+        {
+          "id": "2",
+          "name": "Ethereum",
+          "symbol": "ETH",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    style={
+      {
+        "flex": 1,
+      }
+    }
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "gap": 8,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#364153",
+                "borderRadius": 16,
+                "height": 32,
+                "justifyContent": "center",
+                "width": 32,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#f3f4f6",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              B
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <Text>
+              Bitcoin
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "gap": 8,
+                }
+              }
+            >
+              <Text>
+                BTC
+              </Text>
+              <Image
+                source={
+                  {
+                    "testUri": "../../../src/assets/icons/icChevronRight.png",
+                  }
+                }
+                style={
+                  {
+                    "height": 24,
+                    "tintColor": "#99a1af",
+                    "width": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#f3f4f6",
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "gap": 8,
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#364153",
+                "borderRadius": 16,
+                "height": 32,
+                "justifyContent": "center",
+                "width": 32,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#f3f4f6",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              E
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <Text>
+              Ethereum
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "gap": 8,
+                }
+              }
+            >
+              <Text>
+                ETH
+              </Text>
+              <Image
+                source={
+                  {
+                    "testUri": "../../../src/assets/icons/icChevronRight.png",
+                  }
+                }
+                style={
+                  {
+                    "height": 24,
+                    "tintColor": "#99a1af",
+                    "width": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
+`;

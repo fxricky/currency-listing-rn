@@ -9,7 +9,7 @@ type Props = {
 
 export default function EmptyState({ searchQuery }: Props): React.ReactElement {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="currencylist#empty-state">
       <View style={styles.imgContainer}>
         <Image source={icMagnifyGlass} style={styles.imgMagnifyGlass} />
       </View>

@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyListItem CurrencyListItem 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "gap": 8,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 16,
+      "paddingVertical": 12,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#364153",
+        "borderRadius": 16,
+        "height": 32,
+        "justifyContent": "center",
+        "width": 32,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#f3f4f6",
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      B
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text>
+      Bitcoin
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "gap": 8,
+        }
+      }
+    >
+      <Text>
+        BTC
+      </Text>
+      <Image
+        source={
+          {
+            "testUri": "../../../src/assets/icons/icChevronRight.png",
+          }
+        }
+        style={
+          {
+            "height": 24,
+            "tintColor": "#99a1af",
+            "width": 24,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

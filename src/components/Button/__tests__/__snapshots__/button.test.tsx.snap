@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Danger Button 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#f3f4f6",
+        "borderRadius": 8,
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingVertical": 12,
+      },
+      {
+        "backgroundColor": "#ffe2e2",
+      },
+    ]
+  }
+>
+  <Text
+    numberOfLines={1}
+    style={
+      [
+        {
+          "fontSize": 16,
+        },
+        {
+          "color": "#c10007",
+        },
+      ]
+    }
+  >
+    Test
+  </Text>
+</View>
+`;
+
+exports[`Button Focus Button 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#f3f4f6",
+        "borderRadius": 8,
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingVertical": 12,
+      },
+      {
+        "backgroundColor": "#2b6cb0",
+      },
+    ]
+  }
+>
+  <Text
+    numberOfLines={1}
+    style={
+      [
+        {
+          "fontSize": 16,
+        },
+        {
+          "color": "#fff",
+        },
+      ]
+    }
+  >
+    Test
+  </Text>
+</View>
+`;
+
+exports[`Button Normal Button 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#f3f4f6",
+        "borderRadius": 8,
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingVertical": 12,
+      },
+      {
+        "backgroundColor": "#f3f4f6",
+      },
+    ]
+  }
+>
+  <Text
+    numberOfLines={1}
+    style={
+      [
+        {
+          "fontSize": 16,
+        },
+        {
+          "color": "#000",
+        },
+      ]
+    }
+  >
+    Test
+  </Text>
+</View>
+`;
+
+exports[`Button Success Button 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#f3f4f6",
+        "borderRadius": 8,
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingVertical": 12,
+      },
+      {
+        "backgroundColor": "#dcfce7",
+      },
+    ]
+  }
+>
+  <Text
+    numberOfLines={1}
+    style={
+      [
+        {
+          "fontSize": 16,
+        },
+        {
+          "color": "#008236",
+        },
+      ]
+    }
+  >
+    Test
+  </Text>
+</View>
+`;
