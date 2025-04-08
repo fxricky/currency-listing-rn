@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
-import { icArrowLeft, icMagnifyGlass } from "@/assets/icons";
+import { icArrowLeft, icMagnifyGlass, icX } from "@/assets/icons";
 import { Image, Pressable, StyleSheet, TextInput, View } from "react-native";
 import { ListHeaderSearchContext } from ".";
 import colors from "@/themes/colors";
 import { CurrencyListContext } from "../CurrencyList";
 
 export default function SearchBar(): React.ReactElement {
-  const { setSearchText } = useContext(CurrencyListContext);
+  const { setSearchText, searchText } = useContext(CurrencyListContext);
   const { setIsSearching } = useContext(ListHeaderSearchContext);
   const [isFocused, setIsFocused] = useState(false);
 
@@ -27,6 +27,10 @@ export default function SearchBar(): React.ReactElement {
     setSearchText(text);
   };
 
+  const handleClearText = () => {
+    setSearchText("");
+  };
+
   return (
     <>
       <Pressable onPress={handleBackPress}>
@@ -44,7 +48,13 @@ export default function SearchBar(): React.ReactElement {
           onBlur={handleBlur}
           autoFocus={true}
           onChangeText={handleSearchTextChange}
+          value={searchText}
         />
+        {searchText.length > 0 ? (
+          <Pressable onPress={handleClearText}>
+            <Image source={icX} style={styles.imgX} />
+          </Pressable>
+        ) : null}
       </View>
     </>
   );
@@ -80,5 +90,10 @@ const styles = StyleSheet.create({
   },
   textInputContainerFocused: {
     borderColor: colors.primary,
+  },
+  imgX: {
+    width: 20,
+    height: 20,
+    tintColor: colors.gray["05"],
   },
 });
