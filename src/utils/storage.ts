@@ -27,5 +27,7 @@ export async function getData(key: string): Promise<any | null> {
     return JSON.parse(value);
   } catch (error) {
     console.error(error);
+
+    return null
   }
 }
