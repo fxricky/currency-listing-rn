@@ -5,7 +5,7 @@ import DatabaseStatusIndicator, {
   DatabaseStatus,
 } from "./sections/DatabaseStatusIndicator";
 import CurrencyList from "@/components/CurrencyList";
-import { createContext, useEffect, useReducer, useState } from "react";
+import { createContext, useEffect, useMemo, useReducer, useState } from "react";
 import { Actions, DisplayListType, INITIAL_STATE, reducer } from "./reducer";
 import { CRYPTO_STORAGE_KEY } from "@/data/crypto";
 import { getData } from "@/utils/storage";
@@ -22,27 +22,23 @@ export const HomeScreenContext = createContext({
 
 export default function HomeScreen(): React.ReactElement {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
-  const [displayList, setDisplayList] = useState<Currency[]>([]);
 
-  useEffect(() => {
+  const displayList = useMemo(() => {
     if (state.databaseStatus == "empty") {
-      return setDisplayList([]);
+      return [];
     }
 
     switch (state.displayListType) {
       case "crypto":
-        setDisplayList(state.cryptoList);
-        break;
+        return state.cryptoList;
       case "fiat":
-        setDisplayList(state.fiatList);
-        break;
+        return state.fiatList;
       case "purchasable":
-        setDisplayList(
-          [...state.fiatList, ...state.cryptoList].sort((a, b) =>
-            a.id.localeCompare(b.id),
-          ),
+        return [...state.fiatList, ...state.cryptoList].sort((a, b) =>
+          a.id.localeCompare(b.id),
         );
-        break;
+      default:
+        return [];
     }
   }, [state.databaseStatus, state.displayListType]);
 
@@ -57,7 +53,6 @@ export default function HomeScreen(): React.ReactElement {
 
   const handleClearDatabase = async () => {
     setDatabaseStatus("empty");
-    setDisplayListType("none")();
   };
 
   const handleInsertDatabase = async () => {

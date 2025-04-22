@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useMemo, useState } from "react";
 import { FlatList, ListRenderItem, StyleSheet, View } from "react-native";
 import CurrencyListItem from "@/components/CurrencyListItem";
 import ListHeader from "@/components/ListHeader";
@@ -28,25 +28,23 @@ export default function CurrencyList({
   displayList,
   enableSearch = false,
 }: Props): React.ReactElement {
-  const [filteredList, setFilteredList] = useState<Currency[]>(displayList);
+  // const [filteredList, setFilteredList] = useState<Currency[]>(displayList);
   const [searchText, setSearchText] = useState<string>("");
 
-  useEffect(() => {
+  const filteredList: Currency[] = useMemo(() => {
     const trimmedSearchText = searchText.trim();
 
     if (trimmedSearchText.length == 0) {
-      return setFilteredList(displayList);
+      return displayList;
     }
 
-    const filter = displayList.filter((item: Currency) => {
+    return displayList.filter((item: Currency) => {
       return (
         isStartsWith(item.name, trimmedSearchText) ||
         isStartsWith(item.symbol, trimmedSearchText) ||
         containLeadingWhitespace(item.name, trimmedSearchText)
       );
     });
-
-    setFilteredList(filter);
   }, [displayList, searchText]);
 
   const renderItem: ListRenderItem<Currency> = ({ item }) => {
